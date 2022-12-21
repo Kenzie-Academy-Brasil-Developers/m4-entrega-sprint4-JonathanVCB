@@ -10,7 +10,6 @@ const handleError = async (
   if (error instanceof Apperror) {
     return res.status(error.statusCode).json({ message: error.message });
   }
-  console.log(error);
 
   return res.status(500).json({ message: "internal server error" });
 };

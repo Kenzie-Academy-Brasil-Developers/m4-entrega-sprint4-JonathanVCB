@@ -11,8 +11,6 @@ const createUserService = async (userData: IUserRequest): Promise<IUser> => {
     email: userData.email,
   });
 
-  console.log(alreadyExist);
-
   if (alreadyExist) {
     throw new Apperror("Email already exist");
   }
